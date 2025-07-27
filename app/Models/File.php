@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class File extends Model
 {
-    protected $table = 'file';
+    protected $table = 'files';
     
     protected $fillable = [
 
         'name',
         'extension',
-        'permission',
+        'permission_id',
         'owner_id',
         'catalog_id'
 
