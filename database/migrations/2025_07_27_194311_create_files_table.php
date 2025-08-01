@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('files', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable(false);
+            $table->blob('content');
             $table->string('extension')->nullable(false);
             $table->bigInteger('permission_id')->nullable(false);
             $table->bigInteger('owner_id')->nullable(false);
