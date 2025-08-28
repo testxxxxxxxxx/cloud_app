@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Services\FileService;
 use App\Services\CatalogService;
+use App\Services\PermissionService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->bind(CatalogService::class, function() {
             return app(CatalogService::class);
+        });
+        $this->app->bind(PermissionService::class, function() {
+            return app(PermissionService::class);
         });
     }
 
