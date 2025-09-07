@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FileRequest extends FormRequest
+class IDRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,11 +22,7 @@ class FileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name" => "required",
-            "content" => "required",
-            "extension" => "required",
-            "owner_id" => "required",
-            "catalog_id" => "required"
+             "id" => "required"
         ];
     }
 }

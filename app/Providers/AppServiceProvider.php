@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Services\FileService;
 use App\Services\CatalogService;
 use App\Services\PermissionService;
+use App\Services\FileCreatorService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->bind(PermissionService::class, function() {
             return app(PermissionService::class);
+        });
+        $this->app->bind(FileCreatorService::class, function() {
+            return app(FileCreatorService::class);
         });
     }
 
